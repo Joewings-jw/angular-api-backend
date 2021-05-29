@@ -14,7 +14,7 @@ To start with,we implement the InMemoryDbService interface to expose the createD
 
 As expected,we inject the HttpClient into our product service so that we can access the GET,POST,PUT, basically every other Http verb required to send an HTTP request to the backend.
 
-The angular-inmemory api requires that the url passed to start with the word api followed with the entity to be accessed.Hence we define a private base_URL to serve as a api endpoint.
+The angular-inmemory api requires that the url passed,should start with the word api followed with the entity to be accessed.Hence we define a private base_URL to serve as an api endpoint.
 
 In our used cases,the base_URL is passed as a parameter in the Http methods.
 
