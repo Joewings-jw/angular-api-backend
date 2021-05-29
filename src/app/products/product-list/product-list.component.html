@@ -1,1 +1,19 @@
-<p>product-list works!</p>
+<div>
+    <input type="text" name="productName" [(ngModel)]="product.name">
+    <button [hidden]="add" (click)="add_product()">add Product</button>
+    <button [hidden]="edit" (click)="update_product()">Update Product</button>
+  </div>
+  <table id="products">
+    <tr>
+      <th>S/N</th>
+      <th>Name</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td><button (click)="set_product_edit(product)">Update</button></td>
+      <td><button (click)="remove_product(product)">Delete</button></td>
+    </tr>
+  </table>
