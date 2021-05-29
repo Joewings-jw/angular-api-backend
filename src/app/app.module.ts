@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
+import { ProductsModule } from './products/products.module'
 import { DataService } from './data.service';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { DataService } from './data.service';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ProductsModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService)
   ],
   providers: [],
