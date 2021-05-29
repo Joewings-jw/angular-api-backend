@@ -23,3 +23,11 @@ The create_product method uses the HttpClient POST method to make a post request
 The edit_product method uses the HttpClient to make a PUT request to update an existing product in the database.It returns an Observable of the updated product.
 
 The delete_product method uses the HttpClient to make a delete request to remove an existing product from the database. It similarly returns an Observable of the deleted product.
+
+====================================================================================================
+#Subscribing to an Observable stream of data in components---productList component
+
+The get_products method subscribes to the get_products method of ProductService and sets the result to the products property of the component, while the ngOnInit() lifecycle hook calls the get_products method when the component is initialized.
+Similarly, the add_product, remove_product, and update_product methods subscribe respectively to the create_products, edit_product, and delete_product methods of ProductService.
+
+The angular-in-memory-web-api package helps to mock a REST API with an in-memory database for when the HTTP endpoints are not yet ready for consumption from the backend development team.
